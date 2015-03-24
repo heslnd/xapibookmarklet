@@ -6951,7 +6951,7 @@ code.google.com/p/crypto-js/wiki/License
                         ].join("")
                     },
                     children: [
-                        { tag: "span", attrs: { "class": "rbmTitle", style: "font-weight: bold;" }, text: "HES Learning Reporter" },
+                        { tag: "span", attrs: { "class": "rbmTitle", style: "font-weight: bold;" }, text: "HES Learning Bookmark" },
                         {
                             cache: "closeBtn",
                             tag: "button",
@@ -7043,8 +7043,8 @@ code.google.com/p/crypto-js/wiki/License
         },
         elements = {},
         verbs = [
-           // { display: "experienced", id: "http://adlnet.gov/expapi/verbs/experienced" },
-            { display: "read", id: "http://activitystrea.ms/schema/1.0/read" },
+            { display: "experienced", id: "http://adlnet.gov/expapi/verbs/experienced" },
+           // { display: "read", id: "http://activitystrea.ms/schema/1.0/read" },
            // { display: "bookmarked", id: "http://id.tincanapi.com/verb/bookmarked" },
            // { display: "tweeted", id: "http://id.tincanapi.com/verb/tweeted" }
         ],
