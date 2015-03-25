@@ -7397,6 +7397,6 @@ code.google.com/p/crypto-js/wiki/License
         function() {
             animateOverlay(opacity);
         },
-        75
+        50
     );
 })();
