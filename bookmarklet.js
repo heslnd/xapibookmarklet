@@ -7063,6 +7063,7 @@ code.google.com/p/crypto-js/wiki/License
         ],
         contexts = [
             { display: "Problem Solving", id: "http://connect/departments/hr/training/Skills%20Workshop/courses/problemsolving.htm" },
+            { display: "Goal Setting", id: "http://connect/departments/hr/training/Skills%20Workshop/courses/goalsetting.htm" },
         ],
         agentTags = {},
         agentTagsSHA1,
