@@ -6996,6 +6996,14 @@ code.google.com/p/crypto-js/wiki/License
                             tag: "div",
                             attrs: { "class": "rbmContentSection", style: contentSectionStyle },
                             children: [
+                                { tag: "label", text: "Context: " },
+                                { cache: "contextSelect", tag: "select", attrs: { "class": "rbmContext" } }
+                            ]
+                        },
+                        {
+                            tag: "div",
+                            attrs: { "class": "rbmContentSection", style: contentSectionStyle },
+                            children: [
                                 { tag: "label", text: "Rating: " },
                                 {
                                     cache: "ratingSelect",
@@ -7053,6 +7061,9 @@ code.google.com/p/crypto-js/wiki/License
            // { display: "bookmarked", id: "http://id.tincanapi.com/verb/bookmarked" },
            // { display: "tweeted", id: "http://id.tincanapi.com/verb/tweeted" }
         ],
+        contexts = [
+            { display: "Problem Solving", id: "http://connect/departments/hr/training/Skills%20Workshop/courses/problemsolving.htm" },
+        ],
         agentTags = {},
         agentTagsSHA1,
         i;
@@ -7098,6 +7109,18 @@ code.google.com/p/crypto-js/wiki/License
             option.text = verbs[i].display;
 
             elements.verbSelect.add(option);
+        }
+    }
+    
+    function buildContexts() {
+        var option;
+
+        for (i = 0; i < contexts.length; i += 1) {
+            option = document.createElement("option");
+            option.value = contexts[i].id;
+            option.text = ckontexts[i].display;
+
+            elements.contextSelect.add(option);
         }
     }
 
@@ -7394,6 +7417,7 @@ code.google.com/p/crypto-js/wiki/License
     */
     buildStructure(elementsCfg, document.body);
     buildVerbs();
+    buildContexts();
     bindUI();
     previewStatement();
     loadAgentTags();
