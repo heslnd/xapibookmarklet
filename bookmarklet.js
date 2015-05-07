@@ -7118,7 +7118,7 @@ code.google.com/p/crypto-js/wiki/License
         for (i = 0; i < contexts.length; i += 1) {
             option = document.createElement("option");
             option.value = contexts[i].id;
-            option.text = ckontexts[i].display;
+            option.text = contexts[i].display;
 
             elements.contextSelect.add(option);
         }
