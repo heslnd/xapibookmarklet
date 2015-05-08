@@ -7211,7 +7211,7 @@ code.google.com/p/crypto-js/wiki/License
                         definition: {
                             name: {
                                 "en-US": document.title
-                            }
+                            },
                             description: {
                                 "en-US": elements.descInput.value
                             }
