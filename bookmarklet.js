@@ -7212,6 +7212,9 @@ code.google.com/p/crypto-js/wiki/License
                             name: {
                                 "en-US": document.title
                             }
+                            description: {
+                                "en-US": elements.descInput.value
+                            }
                         }
                     },
                     context: {
@@ -7227,7 +7230,7 @@ code.google.com/p/crypto-js/wiki/License
             ),
             tags = elements.tagInput.value,
             tagActs = [],
-            desc = elements.descInput.value,
+            
             i;
 
         statement.context.contextActivities = new TinCan.ContextActivities(
@@ -7246,13 +7249,13 @@ code.google.com/p/crypto-js/wiki/License
             max: 5,
             raw: Number(elements.ratingSelect.value)
         };
-        
+        /*
         if (desc !== "") {
             statement.object.definition.description = {
                 "en-US": desc
             }
         }
-
+        */
         if (tags !== "") {
             tags = tags.split(/[\s,]+/);
 
