@@ -7224,25 +7224,24 @@ code.google.com/p/crypto-js/wiki/License
                     }
                 }
             ),
-            contextActivity = new TinCan.Activity (
-            {
-                id: elements.contextSelect.value
-            }
-            ),
             tags = elements.tagInput.value,
             tagActs = [],
             
             i;
 
-        if (elements.contextSelect.value != '') {
-            statement.context.contextActivities = new TinCan.ContextActivities(
-                { category: [ bookmarkletActivity ], grouping: [ contextActivity ] }
-            );
-        } else {
-            statement.context.contextActivities = new TinCan.ContextActivities(
+        statement.context.contextActivities = new TinCan.ContextActivities(
                 { category: [ bookmarkletActivity ] }
+        );
+        if (elements.contextSelect.value != '') {
+            var contextActivity = new TinCan.Activity (
+            {
+                id: elements.contextSelect.value
+            }
+            ),
+            statement.context.contextActivities = new TinCan.ContextActivities(
+                { grouping: [ contextActivity ] }
             );
-        }
+        } 
         statement.context.extensions[BROWSER_INFO_EXT] = {
             code_name:           navigator.appCodeName,
             name:                navigator.appName,
