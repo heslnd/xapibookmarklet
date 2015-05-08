@@ -6894,11 +6894,7 @@ code.google.com/p/crypto-js/wiki/License
                 id: "http://id.tincanapi.com/recipe/bookmarklet/base/1"
             }
         ),
-        problemsolvingActivity = new TinCan.Activity (
-            {
-                id: "http://connect/departments/hr/training/Skills%20Workshop/courses/problemsolving.htm"
-            }
-        ),
+        
         lrs = new TinCan.LRS (
             {
                 endpoint: window.rbmEndpoint,
@@ -7065,6 +7061,11 @@ code.google.com/p/crypto-js/wiki/License
             { display: "Problem Solving", id: "http://connect/departments/hr/training/Skills%20Workshop/courses/problemsolving.htm" },
             { display: "Goal Setting", id: "http://connect/departments/hr/training/Skills%20Workshop/courses/goalsetting.htm" },
         ],
+        contextActivity = new TinCan.Activity (
+            {
+                id: elements.contextSelect.value
+            }
+        ),
         agentTags = {},
         agentTagsSHA1,
         i;
@@ -7211,7 +7212,6 @@ code.google.com/p/crypto-js/wiki/License
                     },
                     context: {
                         registration: registration,
-                        grouping: [ id: elements.contextSelect.value ],
                         extensions: {}
                     }
                 }
@@ -7221,7 +7221,7 @@ code.google.com/p/crypto-js/wiki/License
             i;
 
         statement.context.contextActivities = new TinCan.ContextActivities(
-            { category: [ bookmarkletActivity ] }
+            { category: [ bookmarkletActivity ], grouping: [ contextActivity ] }
         );
         statement.context.extensions[BROWSER_INFO_EXT] = {
             code_name:           navigator.appCodeName,
