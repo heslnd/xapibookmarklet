@@ -7211,6 +7211,7 @@ code.google.com/p/crypto-js/wiki/License
                     },
                     context: {
                         registration: registration,
+                        grouping: [ id: elements.contextSelect.value ],
                         extensions: {}
                     }
                 }
@@ -7220,7 +7221,7 @@ code.google.com/p/crypto-js/wiki/License
             i;
 
         statement.context.contextActivities = new TinCan.ContextActivities(
-            { category: [ bookmarkletActivity ], grouping: [ problemsolvingActivity ] }
+            { category: [ bookmarkletActivity ] }
         );
         statement.context.extensions[BROWSER_INFO_EXT] = {
             code_name:           navigator.appCodeName,
