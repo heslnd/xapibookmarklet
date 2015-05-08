@@ -7060,7 +7060,6 @@ code.google.com/p/crypto-js/wiki/License
         },
         elements = {},
         verbs = [
-            { display: "" },
             { display: "experienced", id: "http://adlnet.gov/expapi/verbs/experienced" },
             { display: "presented", id: "http://connect/departments/hr/training/Skills%20Workshop/verbs/presented/presented.html" },
            // { display: "read", id: "http://activitystrea.ms/schema/1.0/read" },
@@ -7068,6 +7067,7 @@ code.google.com/p/crypto-js/wiki/License
            // { display: "tweeted", id: "http://id.tincanapi.com/verb/tweeted" }
         ],
         contexts = [
+            { display: "" },
             { display: "Problem Solving", id: "http://connect/departments/hr/training/Skills%20Workshop/courses/problemsolving.htm" },
             { display: "Goal Setting", id: "http://connect/departments/hr/training/Skills%20Workshop/courses/goalsetting.htm" },
         ],
@@ -7234,9 +7234,15 @@ code.google.com/p/crypto-js/wiki/License
             
             i;
 
-        statement.context.contextActivities = new TinCan.ContextActivities(
-            { category: [ bookmarkletActivity ], grouping: [ contextActivity ] }
-        );
+        if (elements.contextSelect.value != '') {
+            statement.context.contextActivities = new TinCan.ContextActivities(
+                { category: [ bookmarkletActivity ], grouping: [ contextActivity ] }
+            );
+        } else {
+            statement.context.contextActivities = new TinCan.ContextActivities(
+                { category: [ bookmarkletActivity ] }
+            );
+        }
         statement.context.extensions[BROWSER_INFO_EXT] = {
             code_name:           navigator.appCodeName,
             name:                navigator.appName,
