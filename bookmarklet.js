@@ -7032,6 +7032,14 @@ code.google.com/p/crypto-js/wiki/License
                         },
                         {
                             tag: "div",
+                            attrs: { "class": "rbmContentSection", style: contentSectionStyle },
+                            children: [
+                                { tag: "label", text: "Description: " },
+                                { cache: "descInput", tag: "input", attrs: { "class": "rbmDesc", style: "box-sizing: border-box; width: 100%;", type: "text" } }
+                            ]
+                        },
+                        {
+                            tag: "div",
                             attrs: { "class": "rbmContentSection", style: "padding: 10px; margin-top: 10px; background-color: #f5f5f5; border: 1px solid #ddd;" },
                             children: [
                                 { tag: "div", attrs: { style: "font-weight: bold;" }, text: "Statement Preview" },
@@ -7053,6 +7061,7 @@ code.google.com/p/crypto-js/wiki/License
         elements = {},
         verbs = [
             { display: "experienced", id: "http://adlnet.gov/expapi/verbs/experienced" },
+            { display: "presented", id: "http://connect/departments/hr/training/Skills%20Workshop/verbs/presented/presented.html" },
            // { display: "read", id: "http://activitystrea.ms/schema/1.0/read" },
            // { display: "bookmarked", id: "http://id.tincanapi.com/verb/bookmarked" },
            // { display: "tweeted", id: "http://id.tincanapi.com/verb/tweeted" }
