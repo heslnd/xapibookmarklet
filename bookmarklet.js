@@ -7060,6 +7060,7 @@ code.google.com/p/crypto-js/wiki/License
         },
         elements = {},
         verbs = [
+            { display: "" },
             { display: "experienced", id: "http://adlnet.gov/expapi/verbs/experienced" },
             { display: "presented", id: "http://connect/departments/hr/training/Skills%20Workshop/verbs/presented/presented.html" },
            // { display: "read", id: "http://activitystrea.ms/schema/1.0/read" },
@@ -7249,13 +7250,7 @@ code.google.com/p/crypto-js/wiki/License
             max: 5,
             raw: Number(elements.ratingSelect.value)
         };
-        /*
-        if (desc !== "") {
-            statement.object.definition.description = {
-                "en-US": desc
-            }
-        }
-        */
+        
         if (tags !== "") {
             tags = tags.split(/[\s,]+/);
 
