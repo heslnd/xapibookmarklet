@@ -7063,7 +7063,7 @@ code.google.com/p/crypto-js/wiki/License
         ],
         contextActivity = new TinCan.Activity (
             {
-                id: elements.contextSelect.value
+                id: elements.contextSelect.id
             }
         ),
         agentTags = {},
