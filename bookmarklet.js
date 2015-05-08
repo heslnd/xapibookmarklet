@@ -7237,7 +7237,7 @@ code.google.com/p/crypto-js/wiki/License
             {
                 id: elements.contextSelect.value
             }
-            ),
+            );
             statement.context.contextActivities = new TinCan.ContextActivities(
                 { grouping: [ contextActivity ] }
             );
