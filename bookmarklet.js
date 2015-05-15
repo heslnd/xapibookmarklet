@@ -7061,7 +7061,7 @@ code.google.com/p/crypto-js/wiki/License
         elements = {},
         verbs = [
             { display: "experienced", id: "http://adlnet.gov/expapi/verbs/experienced" },
-            { display: "presented", id: "http://connect/departments/hr/training/Skills%20Workshop/verbs/presented/presented.html" },
+            { display: "presented", id: "http://activitystrea.ms/schema/1.0/present" },
            // { display: "read", id: "http://activitystrea.ms/schema/1.0/read" },
            // { display: "bookmarked", id: "http://id.tincanapi.com/verb/bookmarked" },
            // { display: "tweeted", id: "http://id.tincanapi.com/verb/tweeted" }
