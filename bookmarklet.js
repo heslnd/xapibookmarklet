@@ -7013,7 +7013,7 @@ code.google.com/p/crypto-js/wiki/License
                                     ]
                                 }
                             ]
-                        }, */
+                        }, 
                         {
                             tag: "div",
                             attrs: { "class": "rbmContentSection", style: contentSectionStyle },
@@ -7021,7 +7021,7 @@ code.google.com/p/crypto-js/wiki/License
                                 { tag: "label", text: "Your Tags: " },
                                 { cache: "tags", tag: "span", attrs: { "class": "rbmTags" }, text: "Loading..." }
                             ]
-                        },
+                        }, 
                         {
                             tag: "div",
                             attrs: { "class": "rbmContentSection", style: contentSectionStyle },
@@ -7029,7 +7029,7 @@ code.google.com/p/crypto-js/wiki/License
                                 { tag: "label", text: "Selected Tags (space delimited): " },
                                 { cache: "tagInput", tag: "input", attrs: { "class": "rbmNewTags", style: "box-sizing: border-box; width: 100%;", type: "text" } }
                             ]
-                        },
+                        }, */
                         {
                             tag: "div",
                             attrs: { "class": "rbmContentSection", style: contentSectionStyle },
@@ -7145,13 +7145,13 @@ code.google.com/p/crypto-js/wiki/License
                 }
             }
         );
-        elements.tagInput.addEventListener(
+      /*  elements.tagInput.addEventListener(
             "blur",
             function () {
                 previewStatement();
                 setMsg("");
             }
-        );
+        ); */
         elements.verbSelect.addEventListener(
             "change",
             function () {
@@ -7225,8 +7225,8 @@ code.google.com/p/crypto-js/wiki/License
                     }
                 }
             ),
-            tags = elements.tagInput.value,
-            tagActs = [],
+          /*  tags = elements.tagInput.value,
+            tagActs = [], */
             
             i;
 
@@ -7257,7 +7257,7 @@ code.google.com/p/crypto-js/wiki/License
             raw: Number(elements.ratingSelect.value)
         }; */
         
-        if (tags !== "") {
+      /*  if (tags !== "") {
             tags = tags.split(/[\s,]+/);
 
             for (i = 0; i < tags.length; i += 1) {
@@ -7280,7 +7280,7 @@ code.google.com/p/crypto-js/wiki/License
 
             statement.context.contextActivities.other = tagActs;
         }
-
+*/
         setMsg("Sending statement...");
         lrs.saveStatement(
             statement,
@@ -7298,14 +7298,14 @@ code.google.com/p/crypto-js/wiki/License
 
                     setMsg("Statement sent!");
 
-                    saveAgentTags();
+               //     saveAgentTags();
                 }
             }
         );
     }
 
     function previewStatement() {
-        var tags = elements.tagInput.value,
+        var /*tags = elements.tagInput.value, */
             display = [
                 actor.name,
                 ' ',
@@ -7313,18 +7313,18 @@ code.google.com/p/crypto-js/wiki/License
                 ' "',
                 document.title
             ];
-        if (tags !== "") {
+      /*  if (tags !== "") {
             tags = tags.split(/[\s,]+/);
             tags.sort();
 
             display.push(' (');
             display.push(tags.join(" "));
             display.push(')');
-        }
+        } */
 
         elements.previewStatement.firstChild.data = display.join("");
     }
-
+/*
     function loadAgentTags() {
         lrs.retrieveState(
             STATE_TAGS,
@@ -7430,7 +7430,7 @@ code.google.com/p/crypto-js/wiki/License
         previewStatement();
         setMsg("");
     }
-
+*/
     /*
         Begin main execution which occurs when bookmarklet is loaded
     */
@@ -7439,7 +7439,7 @@ code.google.com/p/crypto-js/wiki/License
     buildContexts();
     bindUI();
     previewStatement();
-    loadAgentTags();
+  //  loadAgentTags();
 
     setTimeout(
         function() {
