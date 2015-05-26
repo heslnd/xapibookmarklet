@@ -7135,7 +7135,7 @@ code.google.com/p/crypto-js/wiki/License
     function bindUI() {
         elements.closeBtn.addEventListener("click", closeOverlay, false);
         elements.sendStatementBtn.addEventListener("click", sendStatement, false);
-        elements.tags.addEventListener(
+       /* elements.tags.addEventListener(
             "click",
             function (e) {
                 if (e.target && e.target.classList.contains("rbmTag")) {
@@ -7145,7 +7145,7 @@ code.google.com/p/crypto-js/wiki/License
                 }
             }
         );
-      /*  elements.tagInput.addEventListener(
+        elements.tagInput.addEventListener(
             "blur",
             function () {
                 previewStatement();
