@@ -7159,13 +7159,13 @@ code.google.com/p/crypto-js/wiki/License
                 setMsg("");
             }
         );
-        elements.ratingSelect.addEventListener(
+      /*  elements.ratingSelect.addEventListener(
             "change",
             function () {
                 previewStatement();
                 setMsg("");
             }
-        );
+        ); */
     }
 
     function animateOverlay(opacity) {
@@ -7250,12 +7250,12 @@ code.google.com/p/crypto-js/wiki/License
             platform:            navigator.platform,
             "user-agent-header": navigator.userAgent,
             "cookies-enabled":   navigator.cookieEnabled
-        };
-        statement.context.extensions[QUALITY_RATING_EXT] = {
+        }; 
+        /*statement.context.extensions[QUALITY_RATING_EXT] = {
             min: 1,
             max: 5,
             raw: Number(elements.ratingSelect.value)
-        };
+        }; */
         
         if (tags !== "") {
             tags = tags.split(/[\s,]+/);
