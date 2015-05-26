@@ -6996,7 +6996,7 @@ code.google.com/p/crypto-js/wiki/License
                                 { cache: "contextSelect", tag: "select", attrs: { "class": "rbmContext" } }
                             ]
                         },
-                        {
+                     /*   {
                             tag: "div",
                             attrs: { "class": "rbmContentSection", style: contentSectionStyle },
                             children: [
@@ -7013,7 +7013,7 @@ code.google.com/p/crypto-js/wiki/License
                                     ]
                                 }
                             ]
-                        },
+                        }, */
                         {
                             tag: "div",
                             attrs: { "class": "rbmContentSection", style: contentSectionStyle },
@@ -7311,10 +7311,7 @@ code.google.com/p/crypto-js/wiki/License
                 ' ',
                 elements.verbSelect.options[elements.verbSelect.selectedIndex].text,
                 ' "',
-                document.title,
-                '" and rated it ',
-                elements.ratingSelect.value,
-                ' out of 5.'
+                document.title
             ];
         if (tags !== "") {
             tags = tags.split(/[\s,]+/);
