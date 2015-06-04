@@ -7038,14 +7038,14 @@ code.google.com/p/crypto-js/wiki/License
                                 { cache: "descInput", tag: "input", attrs: { "class": "rbmDesc", style: "box-sizing: border-box; width: 100%;", type: "text" } }
                             ]
                         },
-                        {
+                    /*    {
                             tag: "div",
                             attrs: { "class": "rbmContentSection", style: "padding: 10px; margin-top: 10px; background-color: #f5f5f5; border: 1px solid #ddd;" },
                             children: [
                                 { tag: "div", attrs: { style: "font-weight: bold;" }, text: "Statement Preview" },
                                 { cache: "previewStatement", tag: "span", attrs: { "class": "rbmPreviewStatement" }, text: "" }
                             ]
-                        },
+                        }, */
                         {
                             tag: "div",
                             attrs: { "class": "rbmContentSection", style: contentSectionStyle },
@@ -7296,16 +7296,16 @@ code.google.com/p/crypto-js/wiki/License
                         return;
                     }
 
-                    setMsg("Statement sent!");
+                    setMsg("Activity recorded!");
 
                //     saveAgentTags();
                 }
             }
         );
     }
-
+/*
     function previewStatement() {
-        var /*tags = elements.tagInput.value, */
+        var tags = elements.tagInput.value, 
             display = [
                 actor.name,
                 ' ',
@@ -7313,17 +7313,17 @@ code.google.com/p/crypto-js/wiki/License
                 ' "',
                 document.title
             ];
-      /*  if (tags !== "") {
+        if (tags !== "") {
             tags = tags.split(/[\s,]+/);
             tags.sort();
 
             display.push(' (');
             display.push(tags.join(" "));
             display.push(')');
-        } */
+        } 
 
         elements.previewStatement.firstChild.data = display.join("");
-    }
+    } */
 /*
     function loadAgentTags() {
         lrs.retrieveState(
@@ -7438,7 +7438,7 @@ code.google.com/p/crypto-js/wiki/License
     buildVerbs();
     buildContexts();
     bindUI();
-    previewStatement();
+  //  previewStatement();
   //  loadAgentTags();
 
     setTimeout(
