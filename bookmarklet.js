@@ -7050,7 +7050,7 @@ code.google.com/p/crypto-js/wiki/License
                             tag: "div",
                             attrs: { "class": "rbmContentSection", style: contentSectionStyle },
                             children: [
-                                { cache: "sendStatementBtn", tag: "button", attrs: { "class": "rbmSendStatement" }, text: "Send Statement" },
+                                { cache: "sendStatementBtn", tag: "button", attrs: { "class": "rbmSendStatement" }, text: "Record Activity" },
                                 { cache: "msg", tag: "span", attrs: { "class": "rbmMessage", style: "padding-left: 0.5em;" }, text: "" }
                             ]
                         }
@@ -7281,18 +7281,18 @@ code.google.com/p/crypto-js/wiki/License
             statement.context.contextActivities.other = tagActs;
         }
 */
-        setMsg("Sending statement...");
+        setMsg("Preparing to save...");
         lrs.saveStatement(
             statement,
             {
                 callback: function (err, xhr) {
                     if (err !== null) {
                         if (xhr !== null) {
-                            setMsg("Failed to send statement: " + xhr.responseText + " (" + xhr.status + ")");
+                            setMsg("Failed to save activity: " + xhr.responseText + " (" + xhr.status + ")");
                             return;
                         }
 
-                        setMsg("Failed to send statement: " + err);
+                        setMsg("Failed to save activity: " + err);
                         return;
                     }
 
